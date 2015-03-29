@@ -2,8 +2,6 @@ package proj.synteam.easybtc;
 
 import java.util.List;
 
-import org.json.simple.JSONObject;
-
 import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Context;
@@ -48,8 +46,9 @@ public class Service_WifiScanner extends Service {
 		while (!isConnected()) {
 
 		}
+		
 		log("LOCAL IP : " + Utils.getIpAddress());
-		JSONObject json = new JSONObject();
+		JSON json = new JSON();
 		json.put("name", "heojun");
 		json.put("age", "26");
 		tcpThread.start();
